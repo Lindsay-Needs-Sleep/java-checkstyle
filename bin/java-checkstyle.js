@@ -1,8 +1,10 @@
+#!/usr/bin/env node
+
 (function () {
     'use strict';
 
-    var check = require('../src/index');
     var argv = require('yargs');
+    var check = require('../src/index');
 
     var args = argv
         .usage('Usage: $0 [-c path to config file] <dirs or files to check, space deliminated>')

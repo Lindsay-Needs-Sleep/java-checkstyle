@@ -55,6 +55,6 @@ And if the check still only finds "warnings" the callback will *not* be called w
 
 Before submitting a pull request please:
 - Update the documentation as necessary
-- Run `npm run eslint` to ensure consistent styling
+- Run `npm run style` to ensure consistent styling
 - Run `npm run test` and ensure all tests pass
 - Added automated test coverage as appropriate for this change

@@ -1,6 +1,6 @@
 {
   "name": "java-checkstyle",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "Uses CheckStyle (8.24) (https://checkstyle.sourceforge.io/cmdline.html) to check the styling of your java files.  Option to pass in a config file, defaults to google_check.xml.",
   "license": "LGPL 2.1",
   "author": "Lindsay-Needs-Sleep",
@@ -14,8 +14,8 @@
     "java-checkstyle": "./bin/java-checkstyle.js"
   },
   "scripts": {
-    "test": "./node_modules/.bin/mocha ./test/index.js",
-    "eslint": "node ./node_modules/eslint/bin/eslint src && node ./node_modules/eslint/bin/eslint test && node ./node_modules/eslint/bin/eslint bin"
+    "test": "npx mocha ./test/index.js",
+    "style": "npx eslint src/ test/ bin/"
   },
   "devDependencies": {
     "eslint": "^6.3.0",
