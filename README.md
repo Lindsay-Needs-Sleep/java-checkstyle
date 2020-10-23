@@ -15,7 +15,7 @@ npm install java-checkstyle --save-dev
 
 ## cmd line use
 ```
-> node ./node_modules/java-checkstyle/bin/index.js [-c optional path to config file] <dirs or files to check, space deliminated>
+> npx java-checkstyle [-c optional path to config file] <dirs or files to check, space delimited>
 ```
 If the config file is not specified it defaults to sun_checks.xml (/res/sun_checks.xml)
 
