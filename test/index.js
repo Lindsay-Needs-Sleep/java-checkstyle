@@ -53,8 +53,9 @@
         });
 
         describe('bin', function () {
+            var binCmd = 'node ' + path.join(__dirname, '../bin/java-checkstyle.js') + ' ';
             it('should output errors for a bad java file', function (done) {
-                exec('node ' + path.join(__dirname, '../bin/index.js') + ' ' + path.join(__dirname, './res/Bad.java'), (err, stdout, stderr) => {
+                exec(binCmd + path.join(__dirname, './res/Bad.java'), (err, stdout, stderr) => {
                     should.not.exist(err);
                     should.exist(stdout);
                     stdout.should.match(/\[ERROR\]/);
@@ -62,7 +63,7 @@
                 });
             });
             it('should not output anything for a good java file', function (done) {
-                exec('node ' + path.join(__dirname, '../bin/index.js') + ' ' + path.join(__dirname, './res/Good.java'), (err, stdout, stderr) => {
+                exec(binCmd + path.join(__dirname, './res/Good.java'), (err, stdout, stderr) => {
                     should.not.exist(err);
                     should.exist(stdout);
                     stdout.should.not.match(/\[ERROR\]/);
@@ -70,8 +71,8 @@
                 });
             });
             it('should output errors for good, and bad+good java files', function (done) {
-                exec('node ' + path.join(__dirname, '../bin/index.js')
-                + ' ' + path.join(__dirname, './res/Good.java')
+                exec(binCmd
+                + path.join(__dirname, './res/Good.java')
                 + ' ' + path.join(__dirname, './res'), (err, stdout, stderr) => {
                     should.not.exist(err);
                     should.exist(stdout);

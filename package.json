@@ -1,6 +1,6 @@
 {
   "name": "java-checkstyle",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Uses CheckStyle (8.24) (https://checkstyle.sourceforge.io/cmdline.html) to check the styling of your java files.  Option to pass in a config file, defaults to google_check.xml.",
   "license": "LGPL 2.1",
   "author": "Lindsay-Needs-Sleep",
@@ -11,7 +11,7 @@
   "readme": "README.md",
   "main": "src/index.js",
   "bin": {
-    "java-checkstyle": "./src/index.js"
+    "java-checkstyle": "./bin/java-checkstyle.js"
   },
   "scripts": {
     "test": "./node_modules/.bin/mocha ./test/index.js",
